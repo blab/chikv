@@ -14,7 +14,7 @@
     Hypothesis: Based on the family tree made in FigTree below, Chikungunya's current outbreaks in Southeast Asia and North America
     spread from a re-emergence of Chikungunya in Senegal, which curiously re-appeared after a ~50 year absence. 
 
-  ![](family trees/colored_familytree.png)  
+  ![](Family Trees/FigTree colored_familytree.png)  
 
   1. How are different strains of Chikungunya intermingling with other regions? What might cause that behavior?
   (Example of this in the tree would be the shift from blue to orange in its branches)
