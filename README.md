@@ -1,12 +1,10 @@
-<html>
-<body>
 
 # Chikungunya Project
 # Intro:
   My project is to research and document the dynamics of CHIKV during my internship at the Fred Hutchinson Cancer Research Center as part of the Bedford Lab.
 # Regions of Interest for Chikungunya Virus:
-  1. North America (spec. Caribbean, Central America, and USA)
-  2. Africa (spec. Southern Africa)
+  1. North America 
+  2. Africa
   3. Oceania 
 
 # Research Questions:
@@ -16,7 +14,7 @@
     Hypothesis: Based on the family tree made in FigTree below, Chikungunya's current outbreaks in Southeast Asia and North America
     spread from a re-emergence of Chikungunya in Senegal, which curiously re-appeared after a ~50 year absence. 
 
-  <img src="https://github.com/natbo77/chikv/blob/master/colored_familytree.png">  
+  ![](family trees/colored_familytree.png)  
 
   1. How are different strains of Chikungunya intermingling with other regions? What might cause that behavior?
   (Example of this in the tree would be the shift from blue to orange in its branches)
@@ -25,5 +23,4 @@
     migration patterns of people modern-day. There is a definite pattern in the old-world vs new-world versions of Chikungunya, in
     which its origins are from Southern Africa and it spreads into Southeast Asia, however the new-world version has expanded
     its previous range into Central America. This might be due to the propagation of Aedes Aegypti mosquitoes in warmer areas as a result of global warming, but the dramatic distance needed to travel across different regions is surely not possible by only mosquitoes due to their short flight range. This is where the role of humans comes into play. Maybe people traveling to the Caribbean for vacation carry the virus with them back home and the thermal scanners in airports did not detect CHIKV when tourists returned. Alternatively, people could spread the virus by means of international trade.
-  </body>
-  </html>
+ 
