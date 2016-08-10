@@ -3,7 +3,7 @@
 ## Intro:
   My project is to research and document the dynamics of CHIKV during my internship at the Fred Hutchinson Cancer Research Center as part of the Bedford Lab. Currently, there is an outbreak of Chikungunya in the Caribbean. I wanted to know how the virus got there if its origin was in Africa. 
   
-## Regions of Interest for Chikungunya Virus:
+## Regions of Interest:
   1. North America 
   2. Africa
   3. Oceania 
