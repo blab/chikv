@@ -14,7 +14,7 @@
   
     Hypothesis: Based on the family tree of 114 samples made in FigTree below, Chikungunya's current outbreaks in Oceania and North America spread from a re-emergence of Chikungunya in Tanzania, which curiously re-appeared after a ~40 year absence. 
 
-  ![](Family Trees/115_samples.png)  
+  ![](Family Trees/.png)  
 
   2. How are different strains of Chikungunya intermingling with other regions? What might cause that behavior?
     
