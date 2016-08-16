@@ -19,7 +19,7 @@ parrot = argparse.ArgumentParser(description="Analyze log files; make figures.")
 parrot.add_argument('-burnin', default=5000000, type=int, help="Number of states to remove as burnin.")
 parrot.add_argument('-cutoff', default=5.0, type=float, help="BF Cutoff for Network Diagram.")
 parrot.add_argument('-logfile', type=str, help=".log file to be analyzed.")
-parrot.add_argument('-xml', type=str, help=".xml to pull country (& host) states and priors from.")
+parrot.add_argument('-xml', type=str, help=".xml to pull country (& region) states and priors from.")
 args = vars(parrot.parse_args())
 burnin, logfile, xmlfile, cutoff = args['burnin'], open(args['logfile'], 'r'), open(args['xml'], 'r'), args['cutoff']
 
@@ -28,13 +28,13 @@ logfile.close()
 
 
 xml = ET.parse(xmlfile)	
-root = xml.getroot()												#get the list of countries (and/or hosts), in order, from the xml
+root = xml.getroot()												#get the list of countries (and/or regions), in order, from the xml
 traits = root.findall('generalDataType')
-host_list = None
+region_list = None
 for trait in traits:
-	if trait.get('id').startswith('host'):
-		host_list = [ state.get('code') for state in trait ]
-		n_hosts = len(host_list)
+	if trait.get('id').startswith('region'):
+		region_list = [ state.get('code') for state in trait ]
+		n_regions = len(region_list)
 	elif trait.get('id').startswith('country'):
 		country_list = [ state.get('code') for state in trait ] 
 		n_countries = len(country_list)
@@ -42,9 +42,9 @@ for trait in traits:
 xmlfile.close()
 print 'found these %d countries:'%len(country_list)
 print country_list
-if host_list:
-	print 'found these %d hosts:'%len(host_list)
-	print host_list
+if region_list:
+	print 'found these %d regions:'%len(region_list)
+	print region_list
 
 ################# Deal with burnin, make data structures ###############################
 
@@ -56,7 +56,7 @@ log_data.drop(log_data.index[burnin_indices], inplace=True)
 
 log_data = log_data.append(pd.DataFrame(log_data.mean(), columns=['avg']).T)	#get the average posterior values for each column
 
-def find_bf(indicator_avg, prior_expectation, n_demes, len_chain=50000000): # Demes == 'categories' (e.g., countries, or host species)
+def find_bf(indicator_avg, prior_expectation, n_demes, len_chain=50000000): # Demes == 'categories' (e.g., countries, or regions)
 	priorProbabilityNumerator = prior_expectation					# Number of transitions we 'guessed' would have happened before seeing the data
 	priorProbabilityDenominator = (n_demes**2) - n_demes			# Total number of transitions that *could* have happened
 	priorProbability = float(priorProbabilityNumerator)/float(priorProbabilityDenominator)	# Probability = number of 'successes' / total possible ways to 'win'
@@ -127,7 +127,7 @@ country_actualRates.to_csv(file_stem+'_country_actualRates.csv')								#and wri
 country_bf.to_csv(file_stem+'_country_bf.csv')
 
 country_bf_name = "%s_country_bf.png"%file_stem
-country_actualrates_name = "%s_host_AR.png"%file_stem
+country_actualrates_name = "%s_region_AR.png"%file_stem
 country_map_name = "%s_country_network.png"%file_stem
 
 
@@ -137,27 +137,27 @@ make_heatmap(country_bf, 'Bayes Factors for Geographic Transitions', country_bf_
 
 ## If we have a host trait, too, then do the same for this data.
 
-if host_list:
+if region_list:
 	print 'filling data structures'
-	host_actualRates = pd.DataFrame(dtype = 'float', index=host_list, columns=host_list)	#make empty DFs to hold the actual rates and the bf
-	host_bf = pd.DataFrame(dtype = 'float', index=host_list, columns=host_list)
+	region_actualRates = pd.DataFrame(dtype = 'float', index=region_list, columns=region_list)	#make empty DFs to hold the actual rates and the bf
+	region_bf = pd.DataFrame(dtype = 'float', index=region_list, columns=region_list)
 
-	host_actualRates_series = pd.Series([ series['avg'] for column, series in log_data.iteritems() if 'host.actualRates' in column ]) #pull the average posterior values from appropriate columns in order
+	region_actualRates_series = pd.Series([ series['avg'] for column, series in log_data.iteritems() if 'region.actualRates' in column ]) #pull the average posterior values from appropriate columns in order
 	#convert indicators to bayes factors while we're at it
-	host_bf_series = pd.Series([ find_bf(series['avg'], n_hosts**2-1, n_hosts) for column, series in log_data.iteritems() if 'host.indicator' in column ]) #we will then use this to fill our matrices.
+	region_bf_series = pd.Series([ find_bf(series['avg'], n_regions**2-1, n_regions) for column, series in log_data.iteritems() if 'region.indicator' in column ]) #we will then use this to fill our matrices.
 
-	host_actualRates = fill_matrix(host_actualRates, host_actualRates_series)				#fill our matrices
-	host_bf = fill_matrix(host_bf, pd.Series(host_bf_series))
+	region_actualRates = fill_matrix(region_actualRates, region_actualRates_series)				#fill our matrices
+	region_bf = fill_matrix(region_bf, pd.Series(region_bf_series))
 
-	host_actualRates.to_csv(file_stem+'_host_actualRates.csv')								#and write them to file
-	host_bf.to_csv(file_stem+'_host_bf.csv')
+	region_actualRates.to_csv(file_stem+'_region_actualRates.csv')								#and write them to file
+	region_bf.to_csv(file_stem+'_region_bf.csv')
 
-	host_bf_name = "%s_host_bf.png"%file_stem													# Make pretty heat map figures.
-	host_actualrates_name = "%s_host_AR.png"%file_stem
-	host_map_name = "%s_host_network.png"%file_stem
+	region_bf_name = "%s_region_bf.png"%file_stem													# Make pretty heat map figures.
+	region_actualrates_name = "%s_region_AR.png"%file_stem
+	region_map_name = "%s_region_network.png"%file_stem
 
-	make_heatmap(host_actualRates, 'Host Transition Rates', host_actualrates_name)
-	make_heatmap(host_bf, 'Bayes Factors for Host Transitions', host_bf_name)
+	make_heatmap(region_actualRates, 'Region Transition Rates', region_actualrates_name)
+	make_heatmap(region_bf, 'Bayes Factors for Region Transitions', region_bf_name)
 
 
 ######################### Make a pretty network diagram ########################################
@@ -175,7 +175,7 @@ for from_country in country_list:
 	for to_country in country_list:
 		bayesfactor = country_bf.at[from_country, to_country]
 		rate = country_actualRates.at[from_country, to_country]
-		if bayesfactor >= 10 and rate > 0:
+		if bayesfactor >= 5 and rate > 0:
 			G.add_edge(from_country, to_country, {'rate': '%.3f'%rate, 'support': bayesfactor})
 		else:
 			continue
@@ -198,22 +198,22 @@ nx.draw_networkx_labels(G, pos, node_labels=node_labels, fontsize=28, font_weigh
 plt.bbox_inches="tight"
 plt.savefig(country_map_name)
 
-if host_list:
+if region_list:
 	print 'making network map'
 
-	nparams = len(host_actualRates_series)
+	nparams = len(region_actualRates_series)
 
 	G = nx.DiGraph()						#initialize a networkx graph
 	directed = True
 
-	G.add_nodes_from(host_list)			#each deme is a node
+	G.add_nodes_from(region_list)			#each deme is a node
 
-	for from_host in host_list:
-		for to_host in host_list:
-			bayesfactor = host_bf.at[from_host, to_host]
-			rate = host_actualRates.at[from_host, to_host]
-			if bayesfactor >= 3 and rate > 0:
-				G.add_edge(host2,host,{'rate': '%.3f'%rate, 'support': BF})
+	for from_region in region_list:
+		for to_region in region_list:
+			bayesfactor = region_bf.at[from_region, to_region]
+			rate = region_actualRates.at[from_region, to_region]
+			if bayesfactor >= 5 and rate > 0:
+				G.add_edge(region2,region,{'rate': '%.3f'%rate, 'support': BF})
 			else:
 				continue
 
@@ -230,7 +230,7 @@ if host_list:
 	#make network; show, rather than saving to file.
 	plt.figure(figsize=(15,10))
 	pos = nx.spring_layout(G, iterations=20, k=2)	#set layout
-	nx.draw(G, pos, edges=G.edges(), width=rates, edge_color='dimgray', node_color=range(len(host_list)), cmap=plt.cm.viridis, alpha=0.6, node_size = 2000)
+	nx.draw(G, pos, edges=G.edges(), width=rates, edge_color='dimgray', node_color=range(len(region_list)), cmap=plt.cm.viridis, alpha=0.6, node_size = 2000)
 	nx.draw_networkx_labels(G, pos, node_labels=node_labels, fontsize=28, font_weight='bold')
 	plt.bbox_inches="tight"
-	plt.savefig(host_map_name)
+	plt.savefig(region_map_name)
