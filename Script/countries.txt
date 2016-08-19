@@ -1,0 +1,36 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Angola	-12.3		18.3\
+Australia	-27		133\
+British_Virgin_Islands	18.3		-64.30\
+Cameroon	6	12\
+Central_African_Republic	7	21\
+Comoros	-12.1		44.15\
+Democratic_Republic_of_the_Congo	0	25\
+El_Salvador	13.49		-88.55\
+French_Polynesia	-15		-140\
+Gabon	-1.11		45\
+Haiti	19		-72.25\
+Honduras	15		-86.3\
+Mauritius	-20.17		57.33\
+Mayotte	-12.5		45.1\
+Mexico	23		-102\
+Micronesia	6.55		158.15\
+New_Caledonia	-21.3		165.3\
+Nicaragua	13		-85\
+Nigeria	10		8\
+Panama	9		-80\
+Papua_New_Guinea	-6	147\
+Puerto_Rico	18.15		-66.3	\
+Reunion	-21.6		55.36\
+Saint_Lucia	13.53		-60.58\
+Senegal	14		-14\
+Seychelles	-4.35		55.4\
+Tanzania	-6		35\
+Tonga		-20		-175\
+Trinidad_and_Tobago	10.3		-61.12\
+USA		38		-97}
