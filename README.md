@@ -12,7 +12,7 @@
   1. Were the current CHIKV outbreaks in Southeast Asia and in North America new introductions from Southern Africa, or
   endemic in Southeast Asia and North America from the original introduction?
   
-    Hypothesis: Based on the family tree of 114 samples made in FigTree below, Chikungunya's current outbreaks in Oceania and North America spread from a re-emergence of Chikungunya in Tanzania, which curiously re-appeared after a ~40 year absence. 
+    Hypothesis: Based on the family tree of 114 samples made in FigTree below, Chikungunya's current outbreaks in Oceania and North America spread from a re-emergence of Chikungunya in Tanzania that spread into Oceania then to Mexico, which created the gateway for CHIKV to enter the Caribbean.
 
   ![](Family Trees/new_country.png)  
   ![](Family Trees/new_region.png)
