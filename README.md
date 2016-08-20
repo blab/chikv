@@ -24,3 +24,7 @@
     which its origins are from Northern Africa and it spreads southeast into Oceania, however the new-world version has expanded
     its previous range into Central America. This might be due to the propagation of Aedes Aegypti mosquitoes in warmer areas as a result of global warming, but the dramatic distance needed to travel across different regions is surely not possible by only mosquitoes due to their short flight range. This is where the role of humans comes into play. Maybe people traveling to the Caribbean for vacation carry the virus with them back home and the thermal scanners in airports did not detect CHIKV when tourists returned. Alternatively, people could spread the virus by means of international trade.
  
+
+	<div class="embed-responsive embed-responsive-16by9">
+	  <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/zLyMwWE-f8o"></iframe>
+	</div>
