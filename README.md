@@ -1,5 +1,9 @@
-
 # Chikungunya Project
+
+####Natalie Boesen<sup>1,2</sup>, Sidney Bell<sup>1,3</sup>, Trevor Bedford<sup>1</sup>
+
+<sup>1</sup>Vaccine and Infectious Disease Division, Fred Hutchinson Cancer Research Center, Seattle, WA, USA, <sup>2</sup>Redmond High School, Redmond, WA, USA, <sup>3</sup>Molecular and Cellular Biology Graduate Program, University of Washington, Seattle, WA, USA
+
 ## Intro:
   My project is to research and document the dynamics of CHIKV during my internship at the Fred Hutchinson Cancer Research Center as part of the Bedford Lab. Currently, there is an outbreak of Chikungunya in the Caribbean. I wanted to know how the virus got there if its origin was in Africa. 
   
