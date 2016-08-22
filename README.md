@@ -1,4 +1,4 @@
-# Evolutionary Analysis of Chikungunya amongst Africa, Oceania, and North America
+# Evolutionary and Phylogenetic Analysis of Chikungunya amongst Africa, Oceania, and North America
 
 ####Natalie Boesen<sup>1,2</sup>, Sidney Bell<sup>1,3</sup>, Trevor Bedford<sup>1</sup>
 
