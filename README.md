@@ -53,7 +53,7 @@ This figure shows the certainty of the node's location by country. A little conc
 ## Other Important Notes:
 * Before 2006, CHIKV stayed only in Africa.
 * CHIKV outbreak in 2014 behaved similarly to 2006 outbreak in which CHIKV originated in Africa and then made its way into Oceania and North America. The only difference being the virus traveled from Africa --> North America --> Oceania in 2006, whereas it traveled from Africa --> Oceania --> North America in 2014. 
-* Overall, CHIKV spreads to more countries and persists longer when it travels South as opposed to North. This can be seen when CHIKV traveled North from Nigeria into Senegal, where it only stayed in Senegal and the virus ceased to exist. When I add more regions in the future, I predict the South American outbreak (spec. in Brazil) to attach to the end of the outbreak in Latin America.
+* Overall, CHIKV spreads to more countries and persists longer when it travels South as opposed to North. This can be seen when CHIKV traveled North from Nigeria into Senegal, where it only stayed in Senegal and the virus ceased to exist. When I add more regions in the future, I predict the South American outbreak (spec. in Brazil) will attach to the end of the outbreak in Latin America.
  
 
 	<div class="embed-responsive embed-responsive-16by9">
