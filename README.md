@@ -31,6 +31,12 @@
 
 ## More Figures:
 
+![](beast/region_country_network.png)
+This network diagram shows the transmission rates between various countries sampled.
+
+![](beast/region_region_network.png)
+This network diagram shows the transmission rates between the three regions sampled. All three regions are interconnected, excluding the direct connection from Africa to North America - though there is a connection from North America to Africa.
+
 ![](Family Trees/country_cladogram.png)
 In this tree, the transmission between countries is much clearer. The 2014 outbreak in North America can easily be rooted to its emergence in Mexico, which behaved similarly to how Central African Republic did for the 1980's outbreak of CHIKV. Both traveled south and carried the virus to many countries. 
 
