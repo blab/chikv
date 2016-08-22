@@ -38,15 +38,16 @@ In this tree, the transmission between countries is much clearer. The 2014 outbr
 This figure shows the ages of each node in the entire tree. The common ancestor of all of the samples is approximately 198 years old. 
 
 ![](Family Trees/NodeAgesInAmerica.png)
+
 This figure shows each of the node's ages in the clade of the 2014 outbreak in Oceania and North America. Tanzania (responsible for the spread of CHIKV into Oceania) is roughly 35 years old and the primary node in Mexico responsible for the outbreak throughout North America is almost 4 years old.
 
 ![](Family Trees/NodeCertainty.png)
 This figure shows the certainty of the node's location by country. A little concerning is the certainty for Mexico is quite low at about 38%. The probability is especially important for Mexico because it was the gateway for the virus' occurence in North America.
 
 ## Other Important Notes:
-*Before 2006, CHIKV stayed only in Africa.
-*CHIKV outbreak in 2014 behaved similarly to 2006 outbreak in which CHIKV originated in Africa and then made its way into Oceania and North America. The only difference being the virus traveled from Africa --> North America --> Oceania in 2006, whereas it traveled from Africa --> Oceania --> North America in 2014. 
-*Overall, CHIKV spreads to more countries and persists longer when it travels South as opposed to North. This can be seen when CHIKV traveled North from Nigeria into Senegal, where it only stayed in Senegal and the virus ceased to exist. When I add more regions in the future, I predict the South American outbreak (spec. in Brazil) to attach to the end of the outbreak in Latin America.
+*[Before 2006, CHIKV stayed only in Africa.]
+*[CHIKV outbreak in 2014 behaved similarly to 2006 outbreak in which CHIKV originated in Africa and then made its way into Oceania and North America. The only difference being the virus traveled from Africa --> North America --> Oceania in 2006, whereas it traveled from Africa --> Oceania --> North America in 2014.] 
+*[Overall, CHIKV spreads to more countries and persists longer when it travels South as opposed to North. This can be seen when CHIKV traveled North from Nigeria into Senegal, where it only stayed in Senegal and the virus ceased to exist. When I add more regions in the future, I predict the South American outbreak (spec. in Brazil) to attach to the end of the outbreak in Latin America.]
  
 
 	<div class="embed-responsive embed-responsive-16by9">
