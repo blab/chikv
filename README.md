@@ -40,10 +40,10 @@ This network diagram shows the transmission rates between the three regions samp
 ![](Family Trees/country_cladogram.png)
 In this tree, the transmission between countries is much clearer. The 2014 outbreak in North America can easily be rooted to its emergence in Mexico, which behaved similarly to how Central African Republic did for the 1980's outbreak of CHIKV. Both traveled south and carried the virus to many countries. 
 
-![](Family Trees/NodeAges.png)
-This figure shows the ages of each node in the entire tree. The common ancestor of all of the samples is approximately 198 years old. 
+![](Family Trees/yearTimeline.png)
+This figure shows the ages of each node in the entire tree. The common ancestor of all of the samples is approximately 200 years old. 
 
-![](Family Trees/NodeAgesInAmerica.png)
+![](Family Trees/mexicoTimeline.png)
 
 This figure shows each of the node's ages in the clade of the 2014 outbreak in Oceania and North America. Tanzania (responsible for the spread of CHIKV into Oceania) is roughly 35 years old and the primary node in Mexico responsible for the outbreak throughout North America is almost 4 years old.
 
